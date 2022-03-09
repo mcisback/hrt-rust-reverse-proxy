@@ -1,0 +1,27 @@
+{
+    "bind_to_host": "127.0.0.1",
+    "bind_to_port": "13900",
+    "routes": [
+        {
+            "match": "test1.local",
+            "type": {
+                "what": "header"
+            },
+            "forward_to": "http://localhost:13901"
+        },
+        {
+            "match": "test2.local",
+            "type": {
+                "what": "header"
+            },
+            "forward_to": "http://localhost:13902"
+        },
+        {
+            "match": "/test3",
+            "type": {
+                "what": "path"
+            },
+            "forward_to": "http://localhost:13903"
+        }
+    ]
+}
